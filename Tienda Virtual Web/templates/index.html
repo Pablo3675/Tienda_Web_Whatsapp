@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Tecshop</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">HOME</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">PRODUCTS</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#feedback">CONTACT US</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Vista previa -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">Tecshop</h1>
+        <p class="home__subtitle">Tienda de tecnología y videojuegos</p>
+      </section>
+      <!-- Acerca de mí -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">ABOUT US</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            ¡Bienvenido a nuestra tienda virtual de videojuegos!  
+            En TecShop, nos apasiona el mundo de la tecnología y los videojuegos.
+            Somos una tienda 100% virtual dedicada a ofrecerte una amplia gama de productos relacionados con la tecnología y el entretenimiento digital.
+            
+          </p>
+          <img
+            class="info-block__img"
+            src="../static/img/profile.png"
+            alt="me"
+            width="250"
+            height="250"
+          />
+        </div>
+      </section>
+      <!-- Sección de competencias -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">PRODUCTS</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/ps5.png"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Ps5</span>
+              <input class="skill__button" type="submit" name="button_python" value="SHOW PRODUCT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/PC Gamer.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">PC Gamer</span>
+              <input class="skill__button" type="submit" name="button_discord" value="SHOW PRODUCT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/Xbox series X.png"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Xbox Series X</span>
+              <input class="skill__button" type="submit" name="button_html" value="SHOW PRODUCT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/Meta quest 3.png"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Meta Quest 3</span>
+              <input class="skill__button" type="submit" name="button_db" value="SHOW PRODUCT">
+            </li>
+          </ul>
+        </form>
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/Ps5-Details.png" alt="project" width="500">
+              <a class="project__link" href="https://wa.me/934903882">Abrir Whatsapp</a>
+          </div>
+        {% endif %}
+        {% if button_discord%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/PC Gamer - Details.png" alt="project" width="500">
+              <a class="project__link" href="https://wa.me/934903882">Abrir Whatsapp</a>
+          </div>
+        {% endif %}
+        {% if button_html%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/Ps5-Details.png" alt="project" width="500">
+              <a class="project__link" href="https://wa.me/934903882">Abrir Whatsapp</a>
+          </div>
+        {% endif %}
+        {% if button_db%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/Ps5-Details.png" alt="project" width="500">
+              <a class="project__link" href="https://wa.me/934903882">Abrir Whatsapp</a>
+          </div>
+        {% endif %}
+      </section>
+      <!-- Formulario de contacto -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">FEEDBACK</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="E-mail" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Comment"></textarea>
+          </label>
+          <button class="form__button" type="submit">SEND</button>
+        </form>
+      </section>
+    </main>
+    <!-- Pie de página con enlaces a redes sociales -->
+    <footer>
+
+    </footer>
+  </body>
+</html>
